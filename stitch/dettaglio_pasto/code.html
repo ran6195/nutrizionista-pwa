@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial Nourishment - Meal Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "outline-variant": "#ddc0b8",
+              "tertiary-container": "#4f7f54",
+              "background": "#fcf9f4",
+              "on-tertiary-container": "#f7fff2",
+              "on-primary-container": "#fffbff",
+              "on-secondary-fixed": "#301400",
+              "surface-container-low": "#f6f3ee",
+              "tertiary": "#36663e",
+              "primary": "#9d3e1d",
+              "on-secondary-container": "#794925",
+              "surface-tint": "#a0401f",
+              "on-background": "#1c1c19",
+              "surface": "#fcf9f4",
+              "secondary": "#85532e",
+              "on-tertiary-fixed": "#002109",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#ffdcc6",
+              "on-primary-fixed": "#3a0b00",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1c1c19",
+              "inverse-primary": "#ffb59e",
+              "surface-container": "#f0ede8",
+              "secondary-container": "#febb8e",
+              "outline": "#8a726b",
+              "tertiary-fixed": "#baf0bc",
+              "on-secondary-fixed-variant": "#693c19",
+              "surface-container-highest": "#e5e2dd",
+              "on-surface-variant": "#56423c",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#ffb59e",
+              "surface-variant": "#e5e2dd",
+              "primary-container": "#bd5533",
+              "surface-container-high": "#ebe8e3",
+              "surface-dim": "#dcdad5",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#20502a",
+              "secondary-fixed-dim": "#fbb88b",
+              "inverse-on-surface": "#f3f0eb",
+              "surface-bright": "#fcf9f4",
+              "primary-fixed": "#ffdbd0",
+              "inverse-surface": "#31302d",
+              "tertiary-fixed-dim": "#9fd3a2",
+              "on-primary-fixed-variant": "#802909"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(157, 62, 29, 0.08);
+        }
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+<!-- Top AppBar (JSON Derived) -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a woman with a natural look, soft lighting, warm studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB1UEDHno79hAvZS0dnDha0ywxg6D_rYPQmCFSVCOkBIlqNFfJZsHwYcVS_LkKN7P1PYzq2th6sW4pOzbC56uU-IZhExMWO2BwzkpmGDe8uf1r7uTmh-Xvbepnl-gJ-G03EXixSW9v0tvkS703k6etdeFh9ITz3VKo7Yh7xnURxVNftLVmxZhVxpHnahvquo-kfB6YLCXbgBJhHgNaq4Bg7X7U2HvNQsS3elQMewJ_W1l98SSS9Kh0-GFyAsfXEPZFQaCYRoCVnsEB"/>
+</div>
+<h1 class="font-headline font-bold tracking-tight text-[#9d3e1d] dark:text-[#febb8e] text-xl font-extrabold">Editorial Nourishment</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#794925] dark:text-[#ddc0b8] hover:opacity-80 transition-opacity active:scale-95">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-32 max-w-screen-xl mx-auto">
+<!-- Hero Section -->
+<div class="relative w-full h-[530px] md:h-[618px] overflow-hidden">
+<img alt="Mediterranean Harvest Bowl" class="w-full h-full object-cover" data-alt="Vibrant Mediterranean harvest bowl with roasted chickpeas, fresh kale, avocado slices, and tahini drizzle on a terracotta plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFyW7HAgFFlqdfUsYtqlK9KljSc0ySgFqCggVBIEuax0E2tDJbB0-B0FxnGzl5k3IcZ6_Wo6oMPppGD3U8yGKAjQ20r9Obg_iHkmB1iCSev2rSg_fIQ9-uQG_LXdkhxMk3C-Etssfmqm8FTbXIOCbnGbR_f2VrnjEjAKjTLhQt01Gd0opSLHRO9NJuhmAkrRuLBepFyC6Cu-Wk91AH5U-tN9HPjK6trFSp82BU-IW7m27mZ9SEBxvd0IW3d4ak7f68d_MdzBt_fpBn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label font-medium tracking-widest uppercase">Plant Based</span>
+<span class="px-4 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-label font-medium tracking-widest uppercase">Gut Health</span>
+</div>
+<h2 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-tight max-w-3xl">Mediterranean Harvest Bowl</h2>
+<p class="mt-4 font-body text-on-surface-variant text-lg max-w-xl italic">A sun-drenched symphony of ancient grains, roasted legumes, and cold-pressed oils designed for cellular vitality.</p>
+</div>
+</div>
+<div class="px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12">
+<!-- Sidebar: Nutritional Breakdown -->
+<aside class="lg:col-span-4 order-2 lg:order-1">
+<div class="bg-surface-container-low rounded-xl p-8 sticky top-24">
+<h3 class="font-headline text-2xl font-bold mb-8 text-primary">Nutritional Narrative</h3>
+<div class="space-y-8">
+<!-- Calorie Focus -->
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Energy</p>
+<p class="font-headline text-4xl font-extrabold mt-1">540 <span class="text-lg font-medium text-on-surface-variant">kcal</span></p>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-tertiary/20 border-t-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="bolt">bolt</span>
+</div>
+</div>
+<!-- Macro Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl editorial-shadow">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-2">Protein</p>
+<p class="font-headline text-2xl font-bold">24g</p>
+<div class="w-full h-1 bg-surface-container mt-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl editorial-shadow">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-2">Fiber</p>
+<p class="font-headline text-2xl font-bold">12g</p>
+<div class="w-full h-1 bg-surface-container mt-3 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[85%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl editorial-shadow">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-2">Carbs</p>
+<p class="font-headline text-2xl font-bold">48g</p>
+<div class="w-full h-1 bg-surface-container mt-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[40%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl editorial-shadow">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-2">Healthy Fats</p>
+<p class="font-headline text-2xl font-bold">18g</p>
+<div class="w-full h-1 bg-surface-container mt-3 rounded-full overflow-hidden">
+<div class="bg-[#e49b0f] h-full w-[30%]"></div>
+</div>
+</div>
+</div>
+<!-- Microns List -->
+<div class="pt-4">
+<h4 class="font-headline text-sm font-bold mb-4 opacity-60">Rich in:</h4>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs font-medium px-3 py-1 bg-tertiary/10 text-tertiary rounded-full">Magnesium</span>
+<span class="text-xs font-medium px-3 py-1 bg-tertiary/10 text-tertiary rounded-full">Iron</span>
+<span class="text-xs font-medium px-3 py-1 bg-tertiary/10 text-tertiary rounded-full">Vitamin K</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content: Ingredients & Tips -->
+<div class="lg:col-span-8 order-1 lg:order-2 space-y-16">
+<!-- Ingredients Section -->
+<section>
+<div class="flex items-baseline justify-between mb-8">
+<h3 class="font-headline text-3xl font-bold">The Alchemy</h3>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">8 Elements</span>
+</div>
+<div class="space-y-4">
+<label class="group flex items-center justify-between p-6 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-6">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer absolute opacity-0 w-full h-full cursor-pointer" type="checkbox"/>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-md peer-checked:bg-tertiary peer-checked:border-tertiary transition-all"></div>
+<span class="material-symbols-outlined absolute text-white text-xs opacity-0 peer-checked:opacity-100" data-icon="check">check</span>
+</div>
+<span class="font-headline text-xl font-medium peer-checked:line-through peer-checked:opacity-40 transition-all">Organic Quinoa Base</span>
+</div>
+<span class="font-label text-sm text-on-surface-variant">150g</span>
+</label>
+<label class="group flex items-center justify-between p-6 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-6">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer absolute opacity-0 w-full h-full cursor-pointer" type="checkbox"/>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-md peer-checked:bg-tertiary peer-checked:border-tertiary transition-all"></div>
+<span class="material-symbols-outlined absolute text-white text-xs opacity-0 peer-checked:opacity-100" data-icon="check">check</span>
+</div>
+<span class="font-headline text-xl font-medium">Turmeric Roasted Chickpeas</span>
+</div>
+<span class="font-label text-sm text-on-surface-variant">200g</span>
+</label>
+<label class="group flex items-center justify-between p-6 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-6">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer absolute opacity-0 w-full h-full cursor-pointer" type="checkbox"/>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-md peer-checked:bg-tertiary peer-checked:border-tertiary transition-all"></div>
+<span class="material-symbols-outlined absolute text-white text-xs opacity-0 peer-checked:opacity-100" data-icon="check">check</span>
+</div>
+<span class="font-headline text-xl font-medium">Massaged Dino Kale</span>
+</div>
+<span class="font-label text-sm text-on-surface-variant">2 Cups</span>
+</label>
+<label class="group flex items-center justify-between p-6 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-6">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer absolute opacity-0 w-full h-full cursor-pointer" type="checkbox"/>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-md peer-checked:bg-tertiary peer-checked:border-tertiary transition-all"></div>
+<span class="material-symbols-outlined absolute text-white text-xs opacity-0 peer-checked:opacity-100" data-icon="check">check</span>
+</div>
+<span class="font-headline text-xl font-medium">Haas Avocado</span>
+</div>
+<span class="font-label text-sm text-on-surface-variant">1/2 Large</span>
+</label>
+<label class="group flex items-center justify-between p-6 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-6">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer absolute opacity-0 w-full h-full cursor-pointer" type="checkbox"/>
+<div class="w-6 h-6 border-2 border-outline-variant rounded-md peer-checked:bg-tertiary peer-checked:border-tertiary transition-all"></div>
+<span class="material-symbols-outlined absolute text-white text-xs opacity-0 peer-checked:opacity-100" data-icon="check">check</span>
+</div>
+<span class="font-headline text-xl font-medium">Pomegranate Arils</span>
+</div>
+<span class="font-label text-sm text-on-surface-variant">1/4 Cup</span>
+</label>
+</div>
+</section>
+<!-- Chef's Tips Section -->
+<section class="relative bg-surface-container-high rounded-[2rem] p-10 overflow-hidden">
+<div class="absolute -top-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[12rem]" data-icon="restaurant">restaurant</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="p-3 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Chef's Nutritional Wisdom</h3>
+</div>
+<div class="space-y-8">
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2 italic">1. The "Massage" Technique</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Don't skip massaging the kale with a touch of olive oil and lemon. This breaks down the cellulose, making the nutrients more bioavailable and the texture silky.</p>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2 italic">2. Bioavailability Boost</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">The healthy fats in the avocado are essential for absorbing the fat-soluble vitamins (A, D, E, K) found in the kale and pomegranate. Nature provides the pairing; we just assemble it.</p>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2 italic">3. Crispness Secret</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">For the chickpeas, pat them completely dry before roasting. Any moisture will steam them instead of crisping them, losing that essential textural contrast.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation & CTA Shell -->
+<div class="fixed bottom-0 left-0 w-full z-50">
+<!-- Floating Action Area -->
+<div class="max-w-screen-xl mx-auto px-6 mb-24 flex justify-center">
+<button class="w-full max-w-md bg-gradient-to-r from-tertiary to-tertiary-container text-on-tertiary py-5 rounded-full font-headline font-bold text-lg shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+                Ready to eat
+            </button>
+</div>
+<!-- Bottom Navigation (JSON Derived) -->
+<nav class="bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-[0_-4px_24px_rgba(157,62,29,0.06)]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3 max-w-screen-xl mx-auto">
+<a class="flex flex-col items-center justify-center text-[#794925] dark:text-[#ddc0b8] opacity-60 hover:bg-[#f0ede8] dark:hover:bg-[#2a2a26] transition-colors p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#febb8e] dark:bg-[#9d3e1d] text-[#794925] dark:text-[#ffffff] rounded-full px-5 py-2 transition-all duration-300 ease-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest mt-1">Meal Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#794925] dark:text-[#ddc0b8] opacity-60 hover:bg-[#f0ede8] dark:hover:bg-[#2a2a26] transition-colors p-2 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
