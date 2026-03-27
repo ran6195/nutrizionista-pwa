@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import MealForm, { MealType } from "@/components/MealForm";
 import MealCard from "@/components/MealCard";
@@ -15,6 +15,7 @@ export default function Home() {
   const [currentMealType, setCurrentMealType] = useState<MealType | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
+  const resultRef = useRef<HTMLDivElement>(null);
 
   const handleSubmit = async (mealType: MealType, notes: string) => {
     setLoading(true);
@@ -47,6 +48,9 @@ export default function Home() {
       setCurrentMealId(stored.id);
       setCurrentMealType(mealType);
       setSaved(true);
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     } catch {
       setError("Impossibile contattare il server. Riprova.");
     } finally {
@@ -124,7 +128,7 @@ export default function Home() {
 
         {/* Risultato */}
         {suggestion && (
-          <div className="space-y-3">
+          <div ref={resultRef} className="space-y-3">
             {saved && (
               <div className="flex items-center justify-between">
                 <p
